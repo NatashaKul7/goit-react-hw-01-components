@@ -1,13 +1,30 @@
+import {
+  Container,
+  Items,
+  Status,
+  Name,
+  Span,
+  Online,
+  Offline,
+} from './FriendsItems.styled';
+
 export const FriendsItems = ({ friends }) => {
+  console.log(friends);
   return (
-    <ul className="friends-list">
+    <Container>
       {friends.map(({ id, avatar, name, isOnline }) => (
-        <li key={id} className="item">
-      <span className="status">{isOnline}</span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
-      </li>
+        <Items key={id}>
+        <Span>{isOnline}</Span>
+          <img src={avatar} alt={name} width="48" />
+          <Name>{name}</Name>
+        </Items>
       ))}
-      </ul>
+    </Container>
   );
 };
+
+
+
+  // <Status>
+  //           {isOnline ? <Online /> : <Offline />}
+  //         </Status>

@@ -1,30 +1,31 @@
 // import css from './Profile.styled';
+import { Container, Description, Avatar, Username, Tag, Location, Stats, Details, Quantity, Label } from "./Profile.styled";
 
 
 export const Profile = ({ avatar, tag, username, location, stats }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt={username} className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <Container>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Username>{username}</Username>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <Details>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
+        </Details>
+        <Details>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
+        </Details>
+        <Details>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
+        </Details>
+      </Stats>
+    </Container>
   );
 };
