@@ -1,6 +1,15 @@
-// import css from './Profile.styled';
-import { Container, Description, Avatar, Username, Tag, Location, Stats, Details, Quantity, Label } from "./Profile.styled";
-
+import {
+  Container,
+  Description,
+  Avatar,
+  Username,
+  Tag,
+  Location,
+  Stats,
+  Details,
+  Quantity,
+  Label,
+} from './Profile.styled';
 
 export const Profile = ({ avatar, tag, username, location, stats }) => {
   return (

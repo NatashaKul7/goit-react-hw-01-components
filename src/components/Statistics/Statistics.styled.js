@@ -11,8 +11,6 @@ export const Container = styled.div`
 
 export const StatList = styled.ul`
   display: flex;
-
- 
 `;
 
 export const StatItem = styled.li`
@@ -21,9 +19,9 @@ export const StatItem = styled.li`
   flex: 1;
   flex-direction: column;
   text-align: center;
-    border-collapse: collapse; 
-     border: 1px solid #ccc;
-  
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+
   padding: 14px;
   background-color: #e0ffff;
 `;

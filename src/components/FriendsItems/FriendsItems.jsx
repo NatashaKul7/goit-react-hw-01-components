@@ -1,12 +1,4 @@
-import {
-  Container,
-  Items,
-  Status,
-  Name,
-  Span,
-  Online,
-  Offline,
-} from './FriendsItems.styled';
+import { Container, Items, Name, Span } from './FriendsItems.styled';
 
 export const FriendsItems = ({ friends }) => {
   console.log(friends);
@@ -14,7 +6,7 @@ export const FriendsItems = ({ friends }) => {
     <Container>
       {friends.map(({ id, avatar, name, isOnline }) => (
         <Items key={id}>
-        <Span>{isOnline}</Span>
+          <Span>{isOnline}</Span>
           <img src={avatar} alt={name} width="48" />
           <Name>{name}</Name>
         </Items>
@@ -22,9 +14,3 @@ export const FriendsItems = ({ friends }) => {
     </Container>
   );
 };
-
-
-
-  // <Status>
-  //           {isOnline ? <Online /> : <Offline />}
-  //         </Status>

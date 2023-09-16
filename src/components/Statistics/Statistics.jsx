@@ -1,4 +1,4 @@
-import { StatList, StatItem, Container, Percentage } from "./Statistics.styled";
+import { StatList, StatItem, Container, Percentage } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
